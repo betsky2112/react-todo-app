@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import TodoItem from './TodoItem'
 
-const Todos = ({todos}) => {
+const Todos = ({todos, toggleCompleted}) => {
 	return (
 		<div style={styles.container}>
 			{todos.map((todo) => {
@@ -9,6 +11,7 @@ const Todos = ({todos}) => {
 					<TodoItem
 						key={todo.id}
 						todo={todo}
+						toggleCompleted={toggleCompleted}
 					/>
 				)
 			})}
